@@ -4,10 +4,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/fenshuxianshi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分数"
+            android:textSize="40sp"
+            android:textColor="@color/red"
+            android:gravity="center"
+            />
+
+    </RelativeLayout>
+
         <RelativeLayout
+            android:id="@+id/zhujiemian"
             android:layout_marginTop="100dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
                 <TextView
                     android:layout_centerHorizontal="true"
                     android:id="@+id/zhongwenxianshi"
@@ -15,6 +33,7 @@
                     android:layout_height="wrap_content"
                     android:text="这里显示中文"
                     android:textSize="60sp"
+                    android:gravity="center"
                     />
 
                 <EditText
@@ -27,6 +46,7 @@
                     android:layout_marginTop="50dp"
                     android:layout_centerHorizontal="true"
                     android:paddingHorizontal="40dp"
+                    android:gravity="center"
                     />
 
 
@@ -43,5 +63,28 @@
                         />
 
                 </RelativeLayout>
+    <LinearLayout
+        android:layout_below="@+id/zhujiemian"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <EditText
+            android:inputType="number"
+            android:id="@+id/mubiao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:hint="设置目标"
+            android:gravity="center"
+            />
+        <Button
+            android:id="@+id/shezhimubiao"
+            android:text="确定"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"/>
+    </LinearLayout>
 
 </RelativeLayout>
